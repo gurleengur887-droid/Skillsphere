@@ -241,11 +241,11 @@ const Podcast = () => {
                     <div className="group relative overflow-hidden rounded-[36px] border border-white/10">
 
                       {/* Image */}
-                      <img
-                        src={podcast.image}
-                        alt={podcast.title}
-                        className="w-full h-[500px] object-cover transition duration-[2000ms] group-hover:scale-105"
-                      />
+                     <img
+  src={podcast.image}
+  alt={podcast.title}
+  className="w-full h-[320px] sm:h-[420px] lg:h-[500px] object-contain lg:object-cover bg-[#0B1120] transition duration-[2000ms] group-hover:scale-105"
+/>
 
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/90 via-transparent to-transparent"></div>

@@ -239,7 +239,7 @@ const Footer = () => {
 
             {/* Email */}
             <p className="text-gray-400 text-sm sm:text-base">
-              hello@skillsphere.com
+              eshu@skillspherebyesh.com
             </p>
 
           </motion.div>
