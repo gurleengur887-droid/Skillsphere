@@ -33,7 +33,7 @@ const impactData = [
 
   {
     icon: <FaSchool />,
-    number: 100,
+    number: 1,
     suffix: "K+",
     title: "Schools Impacted Pan India",
   },

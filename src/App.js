@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Podcast from "./pages/Podcast";
 import Workshops from "./pages/Workshops";
+import Programs from "./pages/Programs";
 import Footer from "./pages/Footer";
 
 function App() {
@@ -43,120 +44,141 @@ function App() {
 
           <meta
             property="og:image"
-    content="https://skillspherebyesh.com/seo-banner.png"
-           
+            content="https://skillspherebyesh.com/seo-banner.png"
           />
 
         </Helmet>
 
-       <Routes>
+        <Routes>
 
-  {/* HOME */}
-  <Route
-    path="/"
-    element={
-      <>
-        <Helmet>
-          <title>
-            SkillSphere | Home
-          </title>
+          {/* HOME */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    SkillSphere | Home
+                  </title>
 
-          <meta
-            name="description"
-            content="Empowering educators through meaningful conversations, teacher wellness, leadership development, and impactful learning experiences."
+                  <meta
+                    name="description"
+                    content="Empowering educators through meaningful conversations, teacher wellness, leadership development, and impactful learning experiences."
+                  />
+                </Helmet>
+
+                <Home />
+              </>
+            }
           />
-        </Helmet>
 
-        <Home />
-      </>
-    }
-  />
+          {/* ABOUT */}
+          <Route
+            path="/about"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    About | SkillSphere
+                  </title>
 
-  {/* ABOUT */}
-  <Route
-    path="/about"
-    element={
-      <>
-        <Helmet>
-          <title>
-            About | SkillSphere
-          </title>
+                  <meta
+                    name="description"
+                    content="Learn about SkillSphere’s mission to transform education through mentorship, educator wellbeing, leadership development, and future-focused learning."
+                  />
+                </Helmet>
 
-          <meta
-            name="description"
-            content="Learn about SkillSphere’s mission to transform education through mentorship, educator wellbeing, leadership development, and future-focused learning."
+                <About />
+              </>
+            }
           />
-        </Helmet>
 
-        <About />
-      </>
-    }
-  />
+          {/* WORKSHOPS */}
+          <Route
+            path="/workshops"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    Workshops | SkillSphere
+                  </title>
 
-  {/* WORKSHOPS */}
-  <Route
-    path="/workshops"
-    element={
-      <>
-        <Helmet>
-          <title>
-            Workshops | SkillSphere
-          </title>
+                  <meta
+                    name="description"
+                    content="Explore SkillSphere workshops focused on educator wellbeing, leadership development, mentorship, and transformative educational experiences."
+                  />
+                </Helmet>
 
-          <meta
-            name="description"
-            content="Explore SkillSphere workshops focused on educator wellbeing, leadership development, mentorship, and transformative educational experiences."
+                <Workshops />
+              </>
+            }
           />
-        </Helmet>
 
-        <Workshops />
-      </>
-    }
-  />
+          {/* PROGRAMS */}
+          <Route
+            path="/programs"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    Wellness Programs | SkillSphere
+                  </title>
 
-  {/* CONTACT */}
-  <Route
-    path="/contact"
-    element={
-      <>
-        <Helmet>
-          <title>
-            Contact | SkillSphere
-          </title>
+                  <meta
+                    name="description"
+                    content="Explore SkillSphere wellness programs, teacher reset journeys, educator wellbeing resources, and the School Flourish Index designed to help educators thrive."
+                  />
+                </Helmet>
 
-          <meta
-            name="description"
-            content="Connect with SkillSphere for collaborations, educator programs, leadership workshops, podcasts, and transformative educational experiences."
+                <Programs />
+              </>
+            }
           />
-        </Helmet>
 
-        <Contact />
-      </>
-    }
-  />
+          {/* CONTACT */}
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    Contact | SkillSphere
+                  </title>
 
-  {/* PODCAST */}
-  <Route
-    path="/podcast"
-    element={
-      <>
-        <Helmet>
-          <title>
-            Podcasts | SkillSphere
-          </title>
+                  <meta
+                    name="description"
+                    content="Connect with SkillSphere for collaborations, educator programs, leadership workshops, podcasts, and transformative educational experiences."
+                  />
+                </Helmet>
 
-          <meta
-            name="description"
-            content="Explore inspiring SkillSphere podcast conversations with educators, leaders, and changemakers shaping the future of education."
+                <Contact />
+              </>
+            }
           />
-        </Helmet>
 
-        <Podcast />
-      </>
-    }
-  />
+          {/* PODCAST */}
+          <Route
+            path="/podcast"
+            element={
+              <>
+                <Helmet>
+                  <title>
+                    Podcasts | SkillSphere
+                  </title>
 
-</Routes>
+                  <meta
+                    name="description"
+                    content="Explore inspiring SkillSphere podcast conversations with educators, leaders, and changemakers shaping the future of education."
+                  />
+                </Helmet>
+
+                <Podcast />
+              </>
+            }
+          />
+
+        </Routes>
+
         <Footer />
 
       </BrowserRouter>
