@@ -1,17 +1,13 @@
 import Navbar from "../components/Navbar";
-import { useEffect, useState } from "react";
-import SchoolFlourishPopup from "../pages/SchoolFlourishPopup";
+import React from "react";
+
 
 function Programs() {
-  const [showPopup, setShowPopup] = useState(false);
+ 
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setShowPopup(true);
-  }, 1500);
 
-  return () => clearTimeout(timer);
-}, []);
+
+  
   return (
     <>
       <Navbar />

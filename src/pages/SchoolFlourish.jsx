@@ -1,13 +1,13 @@
-import { useState } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
 import SchoolFlourishHero from "./SchoolFlourishHero";
-import SchoolFlourishPopup from "./SchoolFlourishPopup";
+
 import SchoolFlourishprocess from "./SchoolFlourishprocess";
 import FlourishOverview from "./FlourishOverview";
 import SchoolFlourishCTA from "./SchoolFlourishCTA";
 function SchoolFlourish() {
 
-  const [showPopup, setShowPopup] = useState(true);
+  
 
   return (
     <>
@@ -17,10 +17,7 @@ function SchoolFlourish() {
         <SchoolFlourishprocess />
         <FlourishOverview/>
         <SchoolFlourishCTA />
-      <SchoolFlourishPopup
-        isOpen={showPopup}
-        onClose={() => setShowPopup(false)}
-      />
+     
 
     </>
   );
