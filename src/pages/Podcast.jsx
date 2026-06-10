@@ -267,7 +267,7 @@ const Podcast = () => {
           </motion.div>
 
           {/* PODCAST EPISODES */}
-          <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-20 md:gap-28">
 
             {podcastData.map((podcast, index) => (
 
@@ -301,7 +301,15 @@ const Podcast = () => {
                      <img
   src={podcast.image}
   alt={podcast.title}
-  className="w-full h-[320px] sm:h-[420px] lg:h-[500px] object-contain lg:object-cover bg-[#0B1120] transition duration-[2000ms] group-hover:scale-105"
+ className="
+w-full
+h-[260px]
+sm:h-[340px]
+md:h-[420px]
+lg:h-[500px]
+object-cover
+rounded-[36px]
+"
 />
 
                       {/* Overlay */}
@@ -322,7 +330,13 @@ const Podcast = () => {
                     </p>
 
                     {/* Title */}
-                    <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] mb-8">
+                    <h2 className="
+text-3xl
+sm:text-4xl
+lg:text-5xl
+font-bold
+leading-tight
+">
 
                       {podcast.title}
 
@@ -361,14 +375,30 @@ const Podcast = () => {
                     </div>
 
                     {/* Buttons */}
-                    <div className="flex flex-wrap gap-5">
+                   <div className="flex flex-col sm:flex-row gap-4">
 
                       {/* YouTube */}
                       <a
                         href={podcast.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 bg-red-500/10 border border-red-500/20 px-8 py-4 rounded-full hover:bg-red-500/20 transition duration-300"
+                      className="
+flex
+items-center
+justify-center
+gap-3
+w-full
+sm:w-auto
+bg-red-500/10
+border
+border-red-500/20
+px-7
+py-4
+rounded-full
+hover:bg-red-500/20
+transition
+duration-300
+"
                       >
 
                         <FaYoutube className="text-red-400 text-xl" />
@@ -382,7 +412,23 @@ const Podcast = () => {
                         href={podcast.spotify}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 bg-green-500/10 border border-green-500/20 px-8 py-4 rounded-full hover:bg-green-500/20 transition duration-300"
+                        className="
+flex
+items-center
+justify-center
+gap-3
+w-full
+sm:w-auto
+bg-green-500/10
+border
+border-green-500/20
+px-7
+py-4
+rounded-full
+hover:bg-green-500/20
+transition
+duration-300
+"
                       >
 
                         <FaSpotify className="text-green-400 text-xl" />
