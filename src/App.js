@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Podcast from "./pages/Podcast";
 import Workshops from "./pages/Workshops";
 import Programs from "./pages/Programs";
+import SchoolFlourish from "./pages/SchoolFlourish";
 import Footer from "./pages/Footer";
 
 function App() {
@@ -175,8 +176,12 @@ function App() {
                 <Podcast />
               </>
             }
+            
           />
-
+<Route
+  path="/school-flourish"
+  element={<SchoolFlourish />}
+/>
         </Routes>
 
         <Footer />

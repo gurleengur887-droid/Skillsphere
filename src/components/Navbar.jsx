@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="h-16 flex items-center">
           <img
-            src="/logos/skillsphere.PNG"
+            src="/logos/skillsphere_logo.png"
             alt="SkillSphere Logo"
             className="w-[90px] object-contain"
           />
@@ -61,10 +61,10 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <Link
-          to="/contact"
+          to="/school-flourish"
           className="hidden md:block border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-full hover:bg-[#D4AF37] hover:text-black transition duration-300"
         >
-          Collaborate
+          School Flourish
         </Link>
 
         {/* Mobile Menu Icon */}
@@ -138,11 +138,11 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/contact"
+            to="/school-flourish"
             onClick={() => setMenuOpen(false)}
             className="border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-full mt-4 hover:bg-[#D4AF37] hover:text-black transition duration-300"
           >
-            Collaborate
+            School Flourish
           </Link>
 
         </div>

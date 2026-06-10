@@ -145,42 +145,52 @@ const UpcomingProgram = () => {
               {/* CTA */}
               <div className="flex flex-wrap gap-5">
 
-                <button className="
-                  bg-[#D4AF37]
-                  text-black
-                  px-8
-                  py-4
-                  rounded-full
-                  font-semibold
-                  hover:scale-105
-                  transition
-                  duration-300
-                  shadow-[0_0_30px_rgba(212,175,55,0.25)]
-                ">
+               <button
+  onClick={() =>
+    window.open(
+      "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+      "_blank"
+    )
+  }
+  className="
+    bg-[#D4AF37]
+    text-black
+    px-8
+    py-4
+    rounded-full
+    font-semibold
+    hover:scale-105
+    transition
+    duration-300
+    shadow-[0_0_30px_rgba(212,175,55,0.25)]
+  "
+>
+  Enroll Now
+</button>
 
-                  Enroll Now
-
-                </button>
-
-
-<button className="
-  border
-  border-white/20
-  text-white
-  px-8
-  py-4
-  rounded-full
-  font-semibold
-  hover:border-[#D4AF37]
-  hover:text-[#D4AF37]
-  transition
-  duration-300
-">
-
+<button
+  onClick={() =>
+    window.open(
+      "https://wa.me/919779982614",
+      "_blank"
+    )
+  }
+  className="
+    border
+    border-white/20
+    text-white
+    px-8
+    py-4
+    rounded-full
+    font-semibold
+    hover:border-[#D4AF37]
+    hover:text-[#D4AF37]
+    transition
+    duration-300
+  "
+>
   Contact Us
-
-</button>            
-
+</button>
 
               </div>
 

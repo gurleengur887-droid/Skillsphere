@@ -10,7 +10,8 @@ import {
 import Marquee from "react-fast-marquee";
 
 import {
-  FaQuoteLeft,
+   FaQuoteLeft,
+  FaStar,
   FaPlay,
   FaTimes,
 } from "react-icons/fa";
@@ -21,47 +22,43 @@ const testimonials = [
   {
     message:
       "Hi Eshu, thanks for the wonderful workshop today on Teachers’ Wellness. You didn’t just talk about wellness — you gave us actual tools of reset we could use right away.",
-
     name: "Prati Ma'am",
-
     role: "Teacher",
+    image: null,
   },
 
   {
     message:
       "Eshu Ma’am, it was a wonderful Wellness Session. Your techniques to channelise the stress into good energy were brilliant.",
-
     name: "Jagjeet Singh",
-
-    role: "Principal",
+    role: "SGN School Principal",
+    image: "/images/jagjeet_testimonial.png", 
   },
 
   {
     message:
       "The Teacher Wellness Reset workshop by Eshu Madaan was truly refreshing and insightful. Her engaging and inspiring approach made the workshop meaningful and motivating.",
-
     name: "Radha Ma'am",
-
     role: "Educator",
+    image: null,
   },
 
   {
     message:
       "Thank you for conducting such a wonderful Teacher Wellness Reset Program. The workshop was very engaging, interactive, and insightful.",
-
     name: "Saiyyada Ma'am",
-
     role: "Educator",
+    image: null,
   },
 
   {
-  name: "Dr Pankaj Jain",
-  role: "CT University",
-  message:
-    "We extend our heartfelt gratitude to Eshu Madaan for delivering an insightful session on Unlocking Your Potential at CT University. Your valuable knowledge and interactive approach truly inspired students and helped them understand the importance of soft skills in shaping their future careers.",
-},
+    name: "Dr Pankaj Jain",
+    role: "CT University Director",
+    message:
+      "We extend our heartfelt gratitude to Eshu Madaan for delivering an insightful session on Unlocking Your Potential at CT University. Your valuable knowledge and interactive approach truly inspired students and helped them understand the importance of soft skills in shaping their future careers.",
+    image: "/images/pankaj_testimonial.png", 
+  },
 ];
-
 const videos = [
   {
     video: "/videos/testimonial2.mp4",
@@ -74,8 +71,21 @@ const videos = [
 
     title: "HM • GD Goenka School Noida",
   },
-];
+ {
+    video: "/videos/testimonial3.mp4",
+    title: "Teacher Testimonial",
+  },
 
+  {
+    video: "/videos/testimonial4.mp4",
+    title: "Educator Reflection",
+  },
+
+  {
+    video: "/videos/testimonial5.mp4",
+    title: "School Leader Experience",
+  },
+  ];
 const Testimonials = () => {
 
   const [activeVideo, setActiveVideo] = useState(null);
@@ -203,8 +213,32 @@ const Testimonials = () => {
 
                   </div>
 
-                  {/* Quote */}
-                  <FaQuoteLeft className="text-[#D4AF37] text-xl mb-4" />
+                {/* Rating Stars */}
+<div className="flex gap-1 mb-5">
+
+  {[...Array(5)].map((_, i) => (
+
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{
+        opacity: [0.5, 1, 0.7],
+        scale: [0.9, 1.15, 1],
+      }}
+      transition={{
+        duration: 1.2,
+        delay: i * 0.15,
+        repeat: Infinity,
+      }}
+    >
+
+      <FaStar className="text-[#D4AF37] text-sm" />
+
+    </motion.div>
+
+  ))}
+
+</div>
 
                   {/* Message */}
                   <p className="
@@ -219,22 +253,33 @@ const Testimonials = () => {
 
                   </p>
 
+            
                   {/* Bottom */}
-                  <div className="pt-4 border-t border-white/10">
+<div className="pt-4 border-t border-white/10 flex items-center gap-3">
 
-                    <h3 className="text-xl font-semibold mb-1">
+  {item.image ? (
+    <img
+      src={item.image}
+      alt={item.name}
+      className="w-12 h-12 rounded-full object-cover border border-white/10"
+    />
+  ) : (
+    <div className="w-12 h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center text-sm font-semibold text-gray-300">
+      {item.name.charAt(0)}
+    </div>
+  )}
 
-                      {item.name}
+  <div>
+    <h3 className="text-lg font-semibold">
+      {item.name}
+    </h3>
 
-                    </h3>
+    <p className="text-gray-500 text-sm">
+      {item.role}
+    </p>
+  </div>
 
-                    <p className="text-gray-500 text-sm">
-
-                      {item.role}
-
-                    </p>
-
-                  </div>
+</div>
 
                 </div>
 
@@ -265,119 +310,135 @@ const Testimonials = () => {
             </h2>
 
           </motion.div>
+{/* VIDEOS */}
+<div className="mb-40 overflow-hidden">
 
-          {/* VIDEOS */}
-          <div className="mb-40">
+  <div className="text-center mb-20">
 
-            <div className="text-center mb-20">
+    <h2 className="text-3xl sm:text-5xl font-bold mb-6">
 
-              <h2 className="text-3xl sm:text-5xl font-bold mb-6">
+      Real
+      <span className="text-[#D4AF37]">
+        {" "}Voices
+      </span>
 
-                Real
-                <span className="text-[#D4AF37]">
-                  {" "}Voices
-                </span>
+    </h2>
 
-              </h2>
+    <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
 
-              <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+      Genuine reflections shared by educational leaders and educators.
 
-                Genuine reflections shared by educational leaders and educators.
+    </p>
 
-              </p>
+  </div>
 
-            </div>
+  <Marquee
+    speed={30}
+    pauseOnHover={true}
+    gradient={false}
+    autoFill={true}
+  >
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    {videos.map((item, index) => (
 
-              {videos.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        onClick={() => setActiveVideo(item.video)}
+        className="
+          group
+          cursor-pointer
+          mx-4
+        "
+      >
 
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 1,
-                    delay: index * 0.2,
-                  }}
-                  viewport={{ once: true }}
-                  className="group cursor-pointer"
-                  onClick={() => setActiveVideo(item.video)}
-                >
+       <div
+  className="
+    relative
+    w-[220px]
+    sm:w-[250px]
+    md:w-[280px]
+    h-[320px]
+    sm:h-[380px]
+    overflow-hidden
+    rounded-[32px]
+    border
+    border-white/10
+    bg-white/[0.03]
+    backdrop-blur-xl
+  "
+>
 
-                  <div className="
-                    relative
-                    overflow-hidden
-                    rounded-[40px]
-                    border
-                    border-white/10
-                    bg-white/[0.03]
-                  ">
+          {/* Video */}
+         <video
+  src={item.video}
+  muted
+  playsInline
+  preload="metadata"
+  controlsList="nodownload"
+  disablePictureInPicture
+  className="
+    block
+    w-full
+    h-full
+    object-cover
+    group-hover:scale-105
+    transition-all
+    duration-700
+  "
+/>
 
-                    {/* Video */}
-                    <video
-                      src={item.video}
-                      muted
-                      playsInline
-                      className="
-                        w-full
-                        h-[420px]
-                        sm:h-[520px]
-                        object-cover
-                        group-hover:scale-105
-                        transition-all
-                        duration-700
-                      "
-                    />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/80 via-transparent to-transparent" />
 
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/70 to-transparent"></div>
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
 
-                    {/* Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="
+                w-16
+                h-16
+                rounded-full
+                bg-white/10
+                backdrop-blur-xl
+                border
+                border-white/10
+                flex
+                items-center
+                justify-center
+              "
+            >
 
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        className="
-                          w-20
-                          h-20
-                          rounded-full
-                          bg-white/10
-                          backdrop-blur-xl
-                          border
-                          border-white/10
-                          flex
-                          items-center
-                          justify-center
-                        "
-                      >
+              <FaPlay className="text-white text-lg ml-1" />
 
-                        <FaPlay className="text-white text-xl ml-1" />
-
-                      </motion.div>
-
-                    </div>
-
-                    {/* Title */}
-                    <div className="absolute bottom-8 left-8 right-8">
-
-                      <h3 className="text-xl font-semibold leading-snug">
-
-                        {item.title}
-
-                      </h3>
-
-                    </div>
-
-                  </div>
-
-                </motion.div>
-
-              ))}
-
-            </div>
+            </motion.div>
 
           </div>
+
+          {/* Title */}
+          <div className="absolute bottom-5 left-5 right-5">
+
+            <h3 className="text-sm sm:text-base font-medium leading-snug">
+
+              {item.title}
+
+            </h3>
+
+          </div>
+
+        </div>
+
+      </motion.div>
+
+    ))}
+
+  </Marquee>
+
+</div>
 
           {/* NEWSLETTER */}
           <motion.div
@@ -426,23 +487,7 @@ const Testimonials = () => {
 
                 </p>
 
-                <button className="
-                  bg-[#D4AF37]
-                  text-black
-                  px-8
-                  py-4
-                  rounded-full
-                  font-semibold
-                  hover:scale-105
-                  transition
-                  duration-300
-                  shadow-[0_0_30px_rgba(212,175,55,0.25)]
-                ">
-
-                  Explore Feature
-
-                </button>
-
+               
               </motion.div>
 
               {/* IMAGE */}

@@ -1,7 +1,6 @@
 // About.jsx
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-import Featured from "./Featured";
 import MissionPoster from "./MissionPoster";
 import MediaCoverage from "./MediaCoverage";
 import { Helmet } from "react-helmet-async";
@@ -75,24 +74,61 @@ const About = () => {
           {/* TOP SECTION */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
-            {/* Founder Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              className="relative flex justify-center"
-            >
+           {/* Founder Image */}
+<motion.div
+  initial={{ opacity: 0, x: -80 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+  className="relative flex justify-center"
+>
+  <div className="absolute inset-0 bg-[#D4AF37]/10 blur-3xl rounded-full"></div>
 
-              <div className="absolute inset-0 bg-[#D4AF37]/10 blur-3xl rounded-full"></div>
+  <div className="relative">
 
-              <img
-                src="/images/founder.JPEG"
-                alt="Founder"
-                className="relative w-full max-w-sm sm:max-w-md lg:max-w-md h-[500px] sm:h-[550px] object-cover rounded-[32px] shadow-2xl"
-              />
+    <img
+      src="/images/founder.JPEG"
+      alt="Founder"
+      className="
+        relative
+        w-full
+        max-w-sm
+        sm:max-w-md
+        lg:max-w-md
+        h-[500px]
+        sm:h-[550px]
+        object-cover
+        rounded-[32px]
+        shadow-2xl
+      "
+    />
 
-            </motion.div>
+    {/* Founder Card */}
+    <div
+      className="
+        absolute
+        bottom-5
+        left-5
+        right-5
+        bg-black/60
+        backdrop-blur-xl
+        border
+        border-white/10
+        rounded-3xl
+        p-5
+      "
+    >
+      <h3 className="text-white text-xl font-bold mb-1">
+        Eshu
+      </h3>
+
+      <p className="text-[#D4AF37] text-sm font-medium">
+        Founder & CEO of SkillSphere
+      </p>
+    </div>
+
+  </div>
+</motion.div>
 
             {/* Content */}
             <motion.div
@@ -107,11 +143,11 @@ const About = () => {
               </p>
 
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] mb-8">
-                Empowering
+                Transforming
                 <span className="block text-[#D4AF37]">
                   Educators
                 </span>
-                Through Wellness & Leadership
+                Via Learning, Leadership, Workshops & Podcasts
               </h2>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
@@ -124,8 +160,6 @@ const About = () => {
 
           </div>
 
-          {/* FEATURED */}
-          <Featured />
 
           {/* MISSION POSTER */}
           <MissionPoster />
@@ -248,15 +282,15 @@ const About = () => {
       <p className="uppercase tracking-[4px] text-[#D4AF37] text-xs mb-5">
         Focus Area 03
       </p>
+<h3 className="text-[#D4AF37] text-2xl font-semibold mb-4">
+  Leadership Development
+</h3>
 
-      <h3 className="text-[#D4AF37] text-2xl font-semibold mb-4">
-        Leadership
-      </h3>
-
-      <p className="text-gray-400 leading-relaxed">
-        Helping educators lead with confidence, clarity,
-        purpose, and meaningful long-term impact.
-      </p>
+<p className="text-gray-400 leading-relaxed">
+  Strengthening leadership capacity across teachers,
+  school leaders, and institutions to create thriving
+  learning communities.
+</p>
 
     </motion.div>
 

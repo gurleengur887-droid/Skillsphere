@@ -1,14 +1,35 @@
 import Navbar from "../components/Navbar";
+import { useEffect, useState } from "react";
+import SchoolFlourishPopup from "../pages/SchoolFlourishPopup";
 
 function Programs() {
+  const [showPopup, setShowPopup] = useState(false);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowPopup(true);
+  }, 1500);
+
+  return () => clearTimeout(timer);
+}, []);
   return (
     <>
       <Navbar />
 
-      <section
-        id="programs"
-        className="relative py-20 md:py-24 px-4 sm:px-6 md:px-12 bg-[#050816] min-h-screen overflow-hidden"
-      >
+     <section
+  id="programs"
+  className="
+    relative
+    pt-[140px]
+    pb-20
+    px-4
+    sm:px-6
+    md:px-12
+    bg-[#050816]
+    min-h-screen
+    overflow-hidden
+  "
+>
         <div className="max-w-7xl mx-auto">
 
           {/* HEADING */}
@@ -140,52 +161,206 @@ function Programs() {
             </div>
 
           </div>
+</div>
+      {/* FREE RESOURCES */}
+<section className="mt-20">
 
-          {/* SCHOOL FLOURISH */}
-          <div className="rounded-[28px] md:rounded-[32px] border border-white/10 bg-gradient-to-br from-[#0d1325] to-[#101c39] overflow-hidden">
+  {/* Heading */}
+  <div className="text-center mb-14">
 
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-center p-5 sm:p-7 md:p-12">
+    <p className="uppercase tracking-[5px] text-[#C7D0B3] text-xs sm:text-sm mb-5">
 
-              {/* TEXT */}
-              <div>
+      Free Educator Resources
 
-                <span className="inline-block px-4 py-2 rounded-full bg-green-400/10 text-green-300 text-sm mb-5 border border-green-400/20">
-                  Institutional Wellbeing Framework
-                </span>
+    </p>
 
-                <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-5">
-                  School Flourish Index™
-                </h3>
+    <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-white">
 
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-7">
-                  A structured wellbeing framework helping schools measure,
-                  understand, and improve teacher wellbeing and engagement.
-                </p>
+      Tools For Everyday
+      <span className="text-[#C7D0B3]">
 
-                <a
-                  href="https://wa.me/919779982140"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-green-400 text-black font-semibold hover:scale-105 transition duration-300"
-                >
-                  Book Consultation
-                </a>
+        {" "}Wellbeing
 
-              </div>
+      </span>
 
-              {/* IMAGE */}
-              <div className="w-full">
-                <img
-                  src="/images/flourish.png"
-                  alt="School Flourish Index"
-                  className="w-full h-auto object-contain rounded-3xl"
-                />
-              </div>
+    </h2>
 
-            </div>
-          </div>
+  </div>
+
+  {/* Burnout Tracker Card */}
+  <div
+    className="
+      relative
+      overflow-hidden
+      rounded-[40px]
+      border
+      border-white/10
+      bg-gradient-to-br
+      from-[#0B1120]
+      to-[#111827]
+      backdrop-blur-3xl
+      p-6
+      sm:p-10
+      max-w-5xl
+      mx-auto
+    "
+  >
+
+    {/* Glow */}
+    <div className="absolute top-[-80px] right-[-80px] w-[220px] h-[220px] bg-[#C7D0B3]/10 blur-[100px] rounded-full"></div>
+
+    {/* Badge */}
+    <div className="flex justify-center mb-8">
+
+      <span
+        className="
+          px-5
+          py-2
+          rounded-full
+          border
+          border-[#C7D0B3]/20
+          bg-[#C7D0B3]/10
+          text-[#D6D8C8]
+          text-sm
+        "
+      >
+
+        Weekly Reflection Resource
+
+      </span>
+
+    </div>
+
+    {/* Title */}
+    <h3 className="text-center text-3xl sm:text-5xl font-bold text-white leading-tight mb-5">
+
+      Teacher Burnout
+      <span className="block text-[#C7D0B3]">
+
+        Self-Assessment Tracker
+
+      </span>
+
+    </h3>
+
+    <p className="text-center text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-12">
+
+      A weekly wellness reflection tool designed to help educators
+      recognize stress, monitor emotional wellbeing, and build
+      healthier habits through mindful self-awareness.
+
+    </p>
+
+    {/* Image */}
+    <div className="mb-12">
+
+      <img
+        src="/images/burnout.jpg"
+        alt="Burnout Tracker"
+        className="
+          w-full
+          max-w-3xl
+          mx-auto
+          rounded-[30px]
+          border
+          border-white/10
+          shadow-2xl
+        "
+      />
+
+    </div>
+
+    {/* Features */}
+    <div className="grid sm:grid-cols-2 gap-6 mb-12">
+
+      {[
+        "Weekly Burnout Score",
+        "Emotional Reflection Prompts",
+        "Progress Tracking",
+        "Mini Reset Reminders",
+      ].map((item, index) => (
+
+        <div
+          key={index}
+          className="
+            flex
+            items-center
+            gap-4
+            rounded-2xl
+            border
+            border-white/10
+            bg-white/[0.03]
+            p-5
+          "
+        >
+
+          <div className="w-3 h-3 rounded-full bg-[#C7D0B3]"></div>
+
+          <p className="text-gray-200">
+
+            {item}
+
+          </p>
 
         </div>
+
+      ))}
+
+    </div>
+
+    {/* Buttons */}
+<div className="flex flex-wrap justify-center gap-5">
+
+  {/* Download Tracker */}
+  <a
+    href="/images/burnout.jpg"
+    download
+    className="
+      bg-[#C7D0B3]
+      text-black
+      px-8
+      py-4
+      rounded-full
+      font-semibold
+      hover:scale-105
+      transition
+      duration-300
+      shadow-[0_0_30px_rgba(199,208,179,0.2)]
+    "
+  >
+    Download Tracker
+  </a>
+
+  {/* Get Support */}
+  <button
+    onClick={() =>
+      window.open(
+        "https://wa.me/919779982614?text=Hi, I'd like support regarding teacher wellbeing and burnout management.",
+        "_blank"
+      )
+    }
+    className="
+      border
+      border-white/20
+      text-white
+      px-8
+      py-4
+      rounded-full
+      font-semibold
+      hover:border-[#C7D0B3]
+      hover:text-[#C7D0B3]
+      transition
+      duration-300
+    "
+  >
+    Get Support
+  </button>
+
+</div>
+
+  </div>
+
+</section>   
       </section>
     </>
   );

@@ -34,11 +34,11 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] sm:leading-[1.1] mb-8"
           >
-            Empowering
+            Happy Teachers.
             <span className="block text-[#D4AF37]">
-              Educators
+              Flourishing Schools.
             </span>
-            Through Meaningful Conversations
+            Brighter Futures.
           </motion.h1>
 
           <motion.p

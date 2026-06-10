@@ -28,7 +28,7 @@ const podcastData = [
 
     youtube: "https://youtu.be/Y3bNVWyo4vE?si=Fw3omFJmk9XobWW5",
 
-    spotify: "https://spotify.com/",
+    spotify: "https://open.spotify.com/episode/3ERytwMSEhs5hpc8DipnnJ?si=tS9TTxdXQP-LmEIT-BZicA",
 
     image: "/images/podcast1.JPEG",
   },
@@ -49,7 +49,7 @@ const podcastData = [
 
     youtube: "https://youtube.com/",
 
-    spotify: "https://spotify.com/",
+    spotify: "https://open.spotify.com/episode/6dwDbWyGgdzVUQQWBcl9kB?si=T2lDPMjRRCm2W0hoy0oh8w",
 
     image: "/images/podcast2.JPEG",
   },
@@ -70,7 +70,7 @@ const podcastData = [
 
     youtube: "https://youtu.be/lyNgqddwEBo?si=ENvv4r2ohK8R1eGW",
 
-    spotify: "https://spotify.com/",
+    spotify: "https://open.spotify.com/episode/5XrCdhRgDemj63arVCShzj?si=hRuchyygS12axkZSpziMlg",
 
     image: "/images/podcast3.JPEG",
   },
@@ -93,6 +93,63 @@ const podcastData = [
   spotify: "https://spotify.com/",
 
   image: "/images/podcast4.png",
+},
+  {
+  episode: "Episode 05",
+
+  title: "From Gurus to classrooms",
+
+  description: "Exploring timeless wisdom from Baba Farid Ji, Guru Nanak Dev Ji, and the Mahabharata while discussing how education, values, and respect for teachers have evolved in today's world.",
+
+  guest: "Jaswinder Singh",
+
+  handle: "@jaswins_lab_on_wheels",
+
+  instagram: "https://www.instagram.com/jaswins_lab_on_wheels?igsh=MTN2MWZ0enVtbDJibA==",
+
+  youtube: "https://youtu.be/eqHC2bNAljk?si=STyMADnEAdJfrY0c",
+
+  spotify: "https://open.spotify.com/episode/40zebZOscknqL5HFpOyctd?si=SlS61gBzQgS45LAtiDnTaQ",
+
+  image: "/images/podcast5.jpeg",
+},
+ {
+  episode: "Episode 06",
+
+  title: "Teacher Happiness & Mental Wellbeing",
+
+  description: "Exploring the challenges teachers face today and discussing practical ways to nurture mental health, resilience, work-life balance, and overall wellbeing in education.",
+
+  guest: " Dr. Bhavana Kulshrestha",
+
+  handle: "@dr_bhavana_kulshrestha",
+
+  instagram: "https://www.instagram.com/dr_bhavana_kulshrestha?igsh=Y2F2cng1cHE5MmFx",
+
+  youtube: "https://youtu.be/jGPuZYo1NVw?si=xiSs8ulbFhFNnC7U",
+
+  spotify: "https://open.spotify.com/episode/5n4uYJyO4zTOfoRKVCC7pk?si=Fw3UHK18SpuGYkZaQfj4FQ",
+
+  image: "/images/podcast6.png",
+},
+ {
+  episode: "Episode 07",
+
+  title: "Teacher Happiness & Mental Wellbeing",
+
+  description: "Exploring the challenges teachers face today and discussing practical ways to nurture mental health, resilience, work-life balance, and overall wellbeing in education.",
+
+  guest: " S. Gurr Sewak Singh",
+
+  handle: "@gurr_sewak",
+
+  instagram: "https://www.instagram.com/gurr_sewakk?igsh=MXVodm9mcm1pejN3Zg==",
+
+  youtube: "https://youtu.be/",
+
+  spotify: "https://open.spotify.com/",
+
+  image: "/images/podcast7.png",
 },
 ];
 
@@ -193,7 +250,7 @@ const Podcast = () => {
               </a>
 
               <a
-                href="https://spotify.com/"
+                href="https://open.spotify.com/show/033eoKZw6oJcyrn9LbeX8p?si=xpMy8-VeTSWd-9OmEPPkNw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-green-500/10 border border-green-500/20 px-8 py-4 rounded-full hover:bg-green-500/20 transition duration-300"

@@ -46,7 +46,7 @@ const Footer = () => {
 
             {/* Logo */}
             <img
-              src="/logos/skillsphere.PNG"
+              src="/logos/skillsphere_logo.png"
               alt="SkillSphere Logo"
               className="w-[120px] mb-8"
             />
@@ -158,7 +158,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/skillspherebyesh?igsh=MXU4a2Z0anFuMTQ4Ng==https://www.instagram.com/skillspherebyesh?igsh=MXU4a2Z0anFuMTQ4Ng=="
+                href="https://www.linkedin.com/in/eshu-madaan-a2140282/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -210,7 +210,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://spotify.com/"
+                href="https://open.spotify.com/show/033eoKZw6oJcyrn9LbeX8p?si=xpMy8-VeTSWd-9OmEPPkNw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

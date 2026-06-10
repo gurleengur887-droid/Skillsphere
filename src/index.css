@@ -33,3 +33,11 @@
     transform: rotate(-1.5deg) translateY(-8px);
   }
 }
+video {
+  overflow: hidden !important;
+  display: block;
+}
+
+video::-webkit-scrollbar {
+  display: none;
+}

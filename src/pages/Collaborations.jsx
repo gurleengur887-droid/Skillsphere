@@ -5,11 +5,7 @@ import Marquee from "react-fast-marquee";
 import { FaInstagram } from "react-icons/fa";
 
 const collaborations = [
-  {
-    logo: "/logos/centa.PNG",
-    link: "https://instagram.com/",
-    className: "w-[70px] sm:w-[90px] md:w-[110px]",
-  },
+ 
 
   {
     logo: "/logos/CT_logo.PNG",
@@ -118,7 +114,6 @@ const Collaborations = () => {
                 to-[#0B1120]/95
                 backdrop-blur-xl
                 rotate-0
-                sm:rotate-[-1deg]
                 shadow-[0_10px_40px_rgba(0,0,0,0.45)]
               "
             >

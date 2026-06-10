@@ -3,6 +3,7 @@
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import UpcomingProgram from "./UpcomingProgram";
+import GrowthJourney from "./GrowthJourney";
 import {
   FiMail,
   FiPhone,
@@ -297,7 +298,8 @@ const Contact = () => {
       </section>
 
       <UpcomingProgram />
-
+    
+    <GrowthJourney />
     </>
   );
 };
