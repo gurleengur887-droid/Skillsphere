@@ -75,7 +75,7 @@ const SchoolFlourishCTA = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/919779982614",
+                  "https://wa.me/919779982140",
                   "_blank"
                 )
               }

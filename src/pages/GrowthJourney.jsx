@@ -147,7 +147,7 @@ const GrowthJourney = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+                      "https://wa.me/919779982140",
                       "_blank"
                     )
                   }
@@ -169,7 +169,7 @@ const GrowthJourney = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://wa.me/919779982614",
+                      "https://wa.me/919779982140",
                       "_blank"
                     )
                   }
