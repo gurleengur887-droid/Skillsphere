@@ -9,10 +9,11 @@ const MissionPoster = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+       <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
           {/* LEFT CONTENT */}
-          <motion.div
+         <motion.div
+className="text-center lg:text-left"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -23,22 +24,55 @@ const MissionPoster = () => {
               Our Mission
             </p>
 
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+           <h2 className="
+text-3xl
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
+font-bold
+leading-[1.15]
+mb-6
+sm:mb-8
+">
               Creating
               <span className="text-[#D4AF37]"> Happy Teachers </span>
               For A Better Future
             </h2>
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-10">
+            <p className="
+text-gray-300
+text-base
+sm:text-lg
+leading-relaxed
+mb-8
+sm:mb-10
+">
               Skillsphere is dedicated to empowering educators through
               transformational wellness programs, leadership conversations,
               and meaningful learning experiences that create thriving
               classrooms and inspired futures.
             </p>
+<div className="
+flex
+flex-wrap
+justify-center
+lg:justify-start
+gap-3
+sm:gap-4
+">
 
-            <div className="flex flex-wrap gap-4">
-
-              <div className="border border-white/10 bg-white/5 px-5 py-3 rounded-full text-sm">
+ <div className="
+border
+border-white/10
+bg-white/5
+px-4
+sm:px-5
+py-2.5
+sm:py-3
+rounded-full
+text-xs
+sm:text-sm
+">
                 Teacher Wellness
               </div>
 
@@ -65,11 +99,25 @@ const MissionPoster = () => {
 
             <div className="absolute inset-0 bg-[#D4AF37]/10 blur-3xl rounded-[40px]" />
 
-            <img
-              src="/images/missionposter.png"
-              alt="Skillsphere Mission"
-              className="relative rounded-[40px] border border-white/10 shadow-2xl hover:scale-[1.02] transition duration-500"
-            />
+           <img
+  src="/images/missionposter.png"
+  alt="Skillsphere Mission"
+  className="
+  relative
+  w-full
+  max-w-md
+  mx-auto
+  lg:max-w-full
+  rounded-[32px]
+  sm:rounded-[40px]
+  border
+  border-white/10
+  shadow-2xl
+  hover:scale-[1.02]
+  transition
+  duration-500
+"
+/>
 
           </motion.div>
 

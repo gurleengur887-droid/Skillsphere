@@ -148,7 +148,7 @@ const UpcomingProgram = () => {
                <button
   onClick={() =>
     window.open(
-      "https://forms.gle/YOUR_GOOGLE_FORM_LINK",
+       "https://wa.me/919779982140",
       "_blank"
     )
   }

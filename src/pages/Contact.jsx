@@ -103,10 +103,25 @@ const Contact = () => {
         />
 
       </Helmet>
-
+<Navbar />
       <section
         id="contact"
-        className="relative overflow-hidden bg-gradient-to-b from-[#050816] via-[#07101f] to-[#050816] text-white py-24 sm:py-32 px-5 sm:px-8 md:px-12"
+        className="
+    relative
+    overflow-hidden
+    bg-gradient-to-b
+    from-[#050816]
+    via-[#07101f]
+    to-[#050816]
+    text-white
+    pt-40
+    pb-24
+    sm:pt-44
+    sm:pb-32
+    px-5
+    sm:px-8
+    md:px-12
+  "
       >
 
         {/* Ambient Background */}
@@ -193,7 +208,7 @@ const Contact = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/eshu-madaan-a2140282?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full backdrop-blur-xl bg-white/5 border border-white/10 flex items-center justify-center hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition duration-300"
@@ -293,7 +308,7 @@ const Contact = () => {
 
         </div>
 
-        <Navbar />
+        
 
       </section>
 
