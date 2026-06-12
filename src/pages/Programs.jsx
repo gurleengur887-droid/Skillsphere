@@ -1,15 +1,33 @@
 import Navbar from "../components/Navbar";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import WellBeingDiagnosticPopup from "./WellBeingDiagnosticPopup";
 
 
 function Programs() {
+ const [showDiagnostic, setShowDiagnostic] = useState(false);
+
+useEffect(() => {
+
+  const timer = setTimeout(() => {
+
+    setShowDiagnostic(true);
+
+  }, 1500);
+
+  return () => clearTimeout(timer);
+
+}, []);
+
+
+
  
-
-
-
-  
   return (
-    <>
+     <>
+<WellBeingDiagnosticPopup
+  isOpen={showDiagnostic}
+  onClose={() => setShowDiagnostic(false)}
+/>
+
       <Navbar />
 
      <section
@@ -183,179 +201,7 @@ function Programs() {
 
   </div>
 
-  {/* Burnout Tracker Card */}
-  <div
-    className="
-      relative
-      overflow-hidden
-      rounded-[40px]
-      border
-      border-white/10
-      bg-gradient-to-br
-      from-[#0B1120]
-      to-[#111827]
-      backdrop-blur-3xl
-      p-6
-      sm:p-10
-      max-w-5xl
-      mx-auto
-    "
-  >
-
-    {/* Glow */}
-    <div className="absolute top-[-80px] right-[-80px] w-[220px] h-[220px] bg-[#C7D0B3]/10 blur-[100px] rounded-full"></div>
-
-    {/* Badge */}
-    <div className="flex justify-center mb-8">
-
-      <span
-        className="
-          px-5
-          py-2
-          rounded-full
-          border
-          border-[#C7D0B3]/20
-          bg-[#C7D0B3]/10
-          text-[#D6D8C8]
-          text-sm
-        "
-      >
-
-        Weekly Reflection Resource
-
-      </span>
-
-    </div>
-
-    {/* Title */}
-    <h3 className="text-center text-3xl sm:text-5xl font-bold text-white leading-tight mb-5">
-
-      Teacher Burnout
-      <span className="block text-[#C7D0B3]">
-
-        Self-Assessment Tracker
-
-      </span>
-
-    </h3>
-
-    <p className="text-center text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-12">
-
-      A weekly wellness reflection tool designed to help educators
-      recognize stress, monitor emotional wellbeing, and build
-      healthier habits through mindful self-awareness.
-
-    </p>
-
-    {/* Image */}
-    <div className="mb-12">
-
-      <img
-        src="/images/burnout.jpg"
-        alt="Burnout Tracker"
-        className="
-          w-full
-          max-w-3xl
-          mx-auto
-          rounded-[30px]
-          border
-          border-white/10
-          shadow-2xl
-        "
-      />
-
-    </div>
-
-    {/* Features */}
-    <div className="grid sm:grid-cols-2 gap-6 mb-12">
-
-      {[
-        "Weekly Burnout Score",
-        "Emotional Reflection Prompts",
-        "Progress Tracking",
-        "Mini Reset Reminders",
-      ].map((item, index) => (
-
-        <div
-          key={index}
-          className="
-            flex
-            items-center
-            gap-4
-            rounded-2xl
-            border
-            border-white/10
-            bg-white/[0.03]
-            p-5
-          "
-        >
-
-          <div className="w-3 h-3 rounded-full bg-[#C7D0B3]"></div>
-
-          <p className="text-gray-200">
-
-            {item}
-
-          </p>
-
-        </div>
-
-      ))}
-
-    </div>
-
-    {/* Buttons */}
-<div className="flex flex-wrap justify-center gap-5">
-
-  {/* Download Tracker */}
-  <a
-    href="/images/burnout.jpg"
-    download
-    className="
-      bg-[#C7D0B3]
-      text-black
-      px-8
-      py-4
-      rounded-full
-      font-semibold
-      hover:scale-105
-      transition
-      duration-300
-      shadow-[0_0_30px_rgba(199,208,179,0.2)]
-    "
-  >
-    Download Tracker
-  </a>
-
-  {/* Get Support */}
-  <button
-    onClick={() =>
-      window.open(
-        "https://wa.me/919779982140?text=Hi, I'd like support regarding teacher wellbeing and burnout management.",
-        "_blank"
-      )
-    }
-    className="
-      border
-      border-white/20
-      text-white
-      px-8
-      py-4
-      rounded-full
-      font-semibold
-      hover:border-[#C7D0B3]
-      hover:text-[#C7D0B3]
-      transition
-      duration-300
-    "
-  >
-    Get Support
-  </button>
-
-</div>
-
-  </div>
-
+ 
 </section>   
       </section>
     </>
