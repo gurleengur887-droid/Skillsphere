@@ -182,11 +182,6 @@ useEffect(() => {
   {/* Heading */}
   <div className="text-center mb-14">
 
-    <p className="uppercase tracking-[5px] text-[#C7D0B3] text-xs sm:text-sm mb-5">
-
-      Free Educator Resources
-
-    </p>
 
     <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-white">
 
