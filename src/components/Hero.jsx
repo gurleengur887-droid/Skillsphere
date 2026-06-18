@@ -60,7 +60,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-5"
           >
             <Link to="/programs" className="bg-[#D4AF37] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-[0_0_30px_rgba(212,175,55,0.35)]">
-              Explore Programs
+              Discover Wellness Resources
             </Link>
 
             <a

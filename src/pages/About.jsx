@@ -45,11 +45,24 @@ const About = () => {
         />
 
       </Helmet>
-
+   <Navbar />
       <section
         id="about"
-        className="relative w-full overflow-hidden bg-[#050816] text-white py-24 sm:py-32 px-5 sm:px-8 md:px-12"
-      >
+        className="
+relative
+w-full
+overflow-hidden
+bg-[#050816]
+text-white
+pt-40
+pb-24
+sm:pt-44
+sm:pb-32
+px-5
+sm:px-8
+md:px-12
+"
+>
 
         {/* Glow Effects */}
         <div className="absolute top-0 left-[-120px] w-[320px] h-[320px] bg-[#D4AF37]/10 blur-[120px] rounded-full"></div>
@@ -90,17 +103,18 @@ const About = () => {
       src="/images/founder.JPEG"
       alt="Founder"
       className="
-        relative
-        w-full
-        max-w-sm
-        sm:max-w-md
-        lg:max-w-md
-        h-[500px]
-        sm:h-[550px]
-        object-cover
-        rounded-[32px]
-        shadow-2xl
-      "
+relative
+w-full
+max-w-sm
+sm:max-w-md
+lg:max-w-md
+h-[400px]
+sm:h-[500px]
+lg:h-[550px]
+object-cover
+rounded-[32px]
+shadow-2xl
+"
     />
 
     {/* Founder Card */}
@@ -115,7 +129,7 @@ const About = () => {
         border
         border-white/10
         rounded-3xl
-        p-5
+        p-4 sm:p-5
       "
     >
       <h3 className="text-white text-xl font-bold mb-1">
@@ -301,7 +315,7 @@ const About = () => {
 
       </section>
 
-      <Navbar />
+   
     </>
   );
 };

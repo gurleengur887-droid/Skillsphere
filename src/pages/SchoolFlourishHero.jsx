@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const SchoolFlourishHero = () => {
+const SchoolFlourishHero = ({ setShowPopup }) => {
   return (
     <section className="relative overflow-hidden bg-[#050816] pt-40 pb-32 px-5 sm:px-8 md:px-12">
 
@@ -89,22 +89,22 @@ const SchoolFlourishHero = () => {
             </button>
 
             <button
-              className="
-                border
-                border-white/20
-                text-white
-                px-9
-                py-4
-                rounded-full
-                font-semibold
-                hover:border-[#D4AF37]
-                hover:text-[#D4AF37]
-                transition
-                duration-300
-              "
-            >
-              Watch Overview
-            </button>
+    onClick={() => setShowPopup(true)}
+    className="
+      bg-[#D4AF37]
+      text-black
+      px-9
+      py-4
+      rounded-full
+      font-semibold
+      hover:scale-105
+      transition
+      duration-300
+      shadow-[0_0_30px_rgba(212,175,55,0.25)]
+    "
+  >
+    Measure Your SFI
+  </button>
 
           </div>
 

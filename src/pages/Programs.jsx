@@ -53,7 +53,7 @@ useEffect(() => {
             </h2>
 
             <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-              Designed to help educators reset, recharge, and flourish —
+              Designed to help educators reset, recharge, and flourish 
               individually and institutionally.
             </p>
           </div>
@@ -77,7 +77,7 @@ useEffect(() => {
                 <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-7">
                   A complete wellbeing system designed for educators
                   to reflect, recharge, and rise through guided wellness
-                  tools and mindful habit-building resources.
+                  tools and mindful habit building resources.
                 </p>
 
                 <a
@@ -124,8 +124,7 @@ useEffect(() => {
                 </h3>
 
                 <p className="text-gray-400 leading-relaxed mb-6 text-sm sm:text-base">
-                  A focused 7-day guided wellness journey helping educators
-                  reduce stress and reconnect with calm.
+                 An introductory wellbeing experience for educators beginning their journey towards balance, healthy routines, and everyday flourishing with gentle guidance and community support.
                 </p>
 
                 <a
@@ -158,8 +157,7 @@ useEffect(() => {
                 </h3>
 
                 <p className="text-gray-400 leading-relaxed mb-6 text-sm sm:text-base">
-                  A deeper emotional wellness experience designed to help
-                  educators create sustainable wellbeing habits.
+                 A deeper transformational experience designed for educators ready to cultivate sustainable wellbeing, emotional resilience, and lasting change through immersive practices and guided wellbeing circles.
                 </p>
 
                 <a
@@ -168,7 +166,7 @@ useEffect(() => {
                   rel="noopener noreferrer"
                   className="inline-flex px-6 py-3 rounded-full border border-yellow-400 text-yellow-300 hover:bg-yellow-400 hover:text-black transition duration-300"
                 >
-                  Explore Program
+                  Get Details
                 </a>
 
               </div>
@@ -181,7 +179,6 @@ useEffect(() => {
 
   {/* Heading */}
   <div className="text-center mb-14">
-
 
     <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-white">
 

@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import AssessmentPopup from "../components/AssessmentPopup";
+function FlourishOverview() {
+  const [showPopup, setShowPopup] = useState(false);
 
-function flourishOverview() {
+useEffect(() => {
+  setShowPopup(true);
+}, []);
   return (
     <section className="relative overflow-hidden bg-[#050816] py-24">
 
@@ -50,9 +56,13 @@ function flourishOverview() {
         </motion.div>
 
       </div>
-
+{showPopup && (
+  <AssessmentPopup
+    onClose={() => setShowPopup(false)}
+  />
+)}
     </section>
   );
 }
 
-export default flourishOverview;
+export default FlourishOverview;

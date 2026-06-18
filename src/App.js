@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider, Helmet } from "react-helmet-async";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -8,6 +7,10 @@ import Podcast from "./pages/Podcast";
 import Workshops from "./pages/Workshops";
 import Programs from "./pages/Programs";
 import SchoolFlourish from "./pages/SchoolFlourish";
+import AssessmentPage from "./pages/AssessmentPage";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import Footer from "./pages/Footer";
 
 function App() {
@@ -181,6 +184,25 @@ function App() {
 <Route
   path="/school-flourish"
   element={<SchoolFlourish />}
+/>
+
+
+<Route
+  path="/assessment"
+  element={<AssessmentPage />}
+/>
+<Route
+  path="/skillsphere-admin-login"
+  element={<AdminLogin />}
+/>
+
+<Route
+  path="/skillsphere-admin"
+  element={
+    <ProtectedRoute>
+      <AdminDashboard />
+    </ProtectedRoute>
+  }
 />
         </Routes>
 

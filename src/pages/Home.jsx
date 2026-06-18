@@ -1,13 +1,25 @@
 import { Helmet } from "react-helmet-async";
-
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Pillars from "../pages/Pillars";
 import Collaborations from "./Collaborations";
 import Impact from "./Impact";
 import Testimonials from "./Testimonials";
-
+import TeacherWellnessPopup from "../components/TeacherWellnessPopup";
 const Home = () => {
+  const [showWellnessPopup, setShowWellnessPopup] = useState(false);
+  useEffect(() => {
+
+  const timer = setTimeout(() => {
+
+    setShowWellnessPopup(true);
+
+  }, 6000);
+
+  return () => clearTimeout(timer);
+
+}, []);
   return (
     <>
 
@@ -64,8 +76,17 @@ const Home = () => {
         <Impact />
           
       </div>
-
+{
+  showWellnessPopup && (
+    <TeacherWellnessPopup
+      onClose={() =>
+        setShowWellnessPopup(false)
+      }
+    />
+  )
+}
     </>
+    
   );
 };
 

@@ -329,12 +329,12 @@ function Workshops() {
             <div className="flex flex-wrap gap-4 sm:gap-5 mt-10">
 
               <a
-                href="https://www.instagram.com/skillspherebyesh?igsh=MXU4a2Z0anFuMTQ4Ng==https://www.instagram.com/skillspherebyesh?igsh=MXU4a2Z0anFuMTQ4Ng=="
+                href="/podcast"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#D4AF37] hover:bg-[#c49f22] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base"
               >
-                Explore More Workshops
+                Explore Podcasts
               </a>
 
               <a
