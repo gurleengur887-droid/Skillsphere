@@ -41,13 +41,13 @@ const podcastData = [
     description:
       "Exploring educator wellbeing, emotional resilience, and creating impactful learning environments.",
 
-    guest: "Nishant Singh Lakra",
+    guest: "Hariom Prasad Chourasia",
 
-    handle: "@nishi_ism",
+    handle: "@baccho_ka_dost_",
 
-    instagram: "https://instagram.com/nishi_ism/",
+    instagram: "https://www.instagram.com/baccho_ka_dost_?igsh=MWg5MGQzYTc5YWdzZA==",
 
-    youtube: "https://youtube.com/",
+    youtube: "https://youtu.be/diOZ_zY_gEI?si=M52B76ylTX876t4a",
 
     spotify: "https://open.spotify.com/episode/6dwDbWyGgdzVUQQWBcl9kB?si=T2lDPMjRRCm2W0hoy0oh8w",
 
@@ -150,6 +150,25 @@ const podcastData = [
   spotify: "https://open.spotify.com/",
 
   image: "/images/podcast7.png",
+},
+{
+  episode: "Episode 08",
+
+  title: "Teachers shape lives not just report cards",
+
+  description: "In this episode, we explore the lasting impact educators have beyond the classroom. From nurturing emotional wellbeing to inspiring lifelong learning, we discuss how teachers shape individuals, families, and entire communities.",
+
+  guest: "Nishant Singh Lakra",
+
+  handle: "@nishi_ism",
+
+  instagram: "https://instagram.com/nishi_ism/",
+
+  youtube: "https://youtu.be/1cle0COiMBw?si=ZONtkRGs8Osb23Hz",
+
+  spotify: "https://open.spotify.com/",
+
+  image: "/images/podcast8.JPEG",
 },
 ];
 
@@ -343,11 +362,20 @@ leading-tight
                     </h2>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-2xl">
-
-                      {podcast.description}
-
-                    </p>
+                    <p
+  className="
+    mt-6
+    lg:mt-8
+    text-gray-400
+    text-base
+    sm:text-lg
+    leading-8
+    mb-10
+    max-w-2xl
+  "
+>
+  {podcast.description}
+</p>
 
                     {/* Guest */}
                     <div className="flex flex-wrap items-center gap-5 mb-10">

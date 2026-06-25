@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/Navbar";
-
+import WorkshopGallery from "./WorkshopGallery";
 const workshops = [
   {
     title: "Empowering Teachers With Robotics and AI",
@@ -290,7 +290,7 @@ function Workshops() {
 
           </div>
         </section>
-
+<WorkshopGallery />
         {/* CLOSING SECTION */}
         <section className="relative min-h-[90vh] flex items-center">
 
